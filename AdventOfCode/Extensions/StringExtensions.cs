@@ -29,4 +29,9 @@ public static class StringExtensions
 
         return result;
     }
+
+    public static int GetDigitFromString(this string input)
+    {
+       return int.Parse(new(input.Where(c => char.IsDigit(c)).ToArray()));
+    }
 }
